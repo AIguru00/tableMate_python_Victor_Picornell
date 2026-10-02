@@ -7,3 +7,15 @@ table_id,table_capacity,table_placement,table_type,table_description,is_bookable
 6,4,window,standard,table with a view,true
 7,2,terrace,terrace,smaller terrace table,true
 8,8,indoors,standard,large table for gatherings,true
+9,4,quiet area,standard,table in a secluded corner,true
+10,2,indoors,standard,cozy table for two,true
+11,4,terrace,terrace,table on the terrace with a view,true
+12,6,indoors,standard,spacious table for larger parties,true
+13,2,window,standard,table by the window with a view,true
+14,4,indoors,standard,table in the center of the restaurant,true
+15,4,quiet area,standard,table in a quiet corner,true
+16,2,terrace,terrace,small terrace table,true
+17,6,indoors,standard,large table for groups,true
+18,4,window,standard,table with a view,true
+19,2,indoors,standard,cozy table for two,true
+20,4,terrace,terrace,table on the terrace,true

@@ -1,1 +1,2 @@
 booking_id,customer_name,booking_date,booking_time,guest_count,table_id,booking_status,created_at
+1,andreas,2026-10-04,17:00,2,1,active,2026-10-02 02:12:38
