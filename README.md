@@ -10,7 +10,7 @@ Det kan leda till att gästen inte får det dem önskar vilket i sin tur skapar 
 - visa bordets placering och ge bordet en beskrivning,
 - ge en AI-baserad rekommendation efter gästens önskemål
 - låta gästen välja det slutgiltiga bordet,
-- skapa en boknings bekräftelse med ett unikt bords-ID,
+- skapa en boknings bekräftelse med ett unikt boknings-ID,
 - låta gästen själv avboka med hjälp av ett personligt ID.
 
 Programmet har koppling till AI-Utveckling eftersom det kombinerar Python, strukturerad data, ett externt AI-API och vanlig programlogik. AI används för att rekommendera ett bord medan Python kontrollerar kapacitet och tillgänglighet.
@@ -54,6 +54,11 @@ Under utvecklingen hade jag även problem med indrag och onödiga mellanrum i ko
 Jag använde AI som stöd för att felsöka, förenkla vissa delar och förbättra kodens läsbarhet. Jag skrev egna markdowntexter som sedan bearbetades språkligt med hjälp av AI. Jag fick även hjälp att skapa korta docstrings som dokumenterar funktionernas syfte utan att varje enkel kodrad behöver kommenteras. Därefter har jag gått igenom och anpassat materialet till mitt eget projekt.
 
 Arbetet har gett mig en större förståelse för hur funktioner, klasser, CSV-filer, felhantering och ett externt API kan kombineras till ett sammanhängande program. Jag har också lärt mig att användarflödet är en viktig del av programutvecklingen och att en tekniskt fungerande lösning inte alltid är tillräcklig om den är svår att använda.
+## Etik, säkerhet och begränsningar
+
+Groq används endast för att rekommendera ett av de bord som Python redan har kontrollerat. AI:n kan därför inte boka ett upptaget eller obefintligt bord. Kundens namn skickas inte till Groq.
+
+I detta fall sparas gästnamn och bokningar lokalt i en CSV-fil. I ett verkligt system skulle informationen behöva lagras säkrare i en databas och behandlas enligt GDPR. Programmet är även beroende av internetanslutning och en giltig Groq API-nyckel för att kunna visa AI-rekommendationer.
 ## GitHub
 Projektets repository finns här:
 https://github.com/AIguru00/tablemate-python-project
@@ -64,7 +69,7 @@ Projektet kräver:
 - Visual Studio Code med tillägget Jupyter
 - Python-biblioteket "Groq"
 ### 1. Installera Groq
-Öppna Powershell och kör:  """ python -m pip install groq """
+Öppna Powershell och kör:  """ pip install -r requirements.txt """
 ### 2. Skapa API-Nyckel
 Skapa en API-nyckel hos Groq och spara den som en miljövariabel. API-nyckeln får inte skrivas direkt i koden eller laddas upp i GitHub.
 Så det du gör istället är att köra kommandot i PowerShell: """ setx GROQ_API_KEY "DIN_API_NYCKEL" """
@@ -74,6 +79,8 @@ Starta därefter om PowerShell och Visual Studio Code så att miljövariabeln bl
 1. Ladda ner eller klona projektet från GitHub.
 2. Öppna projektmappen i Visual Studio Code.
 3. Kontrollera att "tables.csv" och "bookings.csv" ligger i samma map som notebooken.
-4. Öppna projektets ".ipynb" fil.
-5. Kör samtliga kodceller uppifrån och ned.
-6. Följ instruktionerna i programmets huvudmeny.
+##Testning
+
+5. Öppna projektets ".ipynb" fil.
+6. Kör samtliga kodceller uppifrån och ned.
+7. Följ instruktionerna i programmets huvudmeny.
