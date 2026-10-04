@@ -79,8 +79,12 @@ Starta därefter om PowerShell och Visual Studio Code så att miljövariabeln bl
 1. Ladda ner eller klona projektet från GitHub.
 2. Öppna projektmappen i Visual Studio Code.
 3. Kontrollera att "tables.csv" och "bookings.csv" ligger i samma map som notebooken.
-##Testning
+## Testning
+Koden har testats och förväntas fungera vid programmets bokning, avbokning, datalagring, validering och felhantering:
+- Skriva text istället för ett menyval -- Programmet visar ett felmeddelande och ber användaren försöka igen.
+- Skapa en giltig bokning -- Bokningen sparas och visar ett unikt boknings-ID
+- Söka efter ett bord för flera gäster - Programmet visar endast bord med tillräcklig kapacitet
+- Försöka dubbelboka samma bord -- Bordet visas inte som ledigt vid samma datum och tid
+- Avboka med ett giltigt boknings-ID -- Bokningens status ändras till cancelled
+- Avboka med ett ogiltigt boknings-ID -- Programmet visar ett tydligt felmeddelande
 
-5. Öppna projektets ".ipynb" fil.
-6. Kör samtliga kodceller uppifrån och ned.
-7. Följ instruktionerna i programmets huvudmeny.
